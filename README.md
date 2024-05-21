@@ -1,6 +1,6 @@
 Introduction:
 
-This project receives an image (jpg, png or webp) of a vinyl album record jacket to identify the album and return the suggested sale price of the item.  It does so by using a CNN for image similarity coupled with Regression techniques. 
+This project receives an image (jpg, png or webp) of a vinyl album record jacket to identify the album and return the suggested sale price of the item.  It does so by using a CNN for image similarity coupled with Regression techniques for optimization. 
 
 Requirements:
 
