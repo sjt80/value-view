@@ -18,19 +18,22 @@ connections so we have some images not downloaded (I need to update script to re
 
 The current notebook can be run to get your own images from your own scraping json file however for easier demonstration purposes we have supplied some images in the repository in scraping/files/Archive.zip
 
-Step 2:  Vision+value-pred 
+Step 2:  Value-Pred 
 
 This is where the magic happens! This notebook predicts the price of an item based on input image with the following steps:
 
 1.) The csv we created in the EDA data extraction notebook is imported as a csv.
 
-2.) We set up our tensorflow CNN model and define a function to extract image embeddings with the model using predict(). Many models use the embeddings to tag or annotate images, we strip this part and just use the 
-feature vectors / embedding extraction. This is essentially our training data or data to compare a new image to identify what it is.
+2.) We set up our pretrained tensorflow CNN model and define a function to extract image embeddings with the model using predict(). Many models use the embeddings to tag or annotate images, we strip this part and just use the feature vectors / embedding extraction.
 
-3.) We add the image embeddings back to the dataframe for the corresponding image (that in turn also represents a product/item).
+3.) The image embeddings are added back to the dataframe for the corresponding image (that in turn also represents a product/item).
 
-4.) We extract the image embedding from a new original image
+4.) We extract the image embedding from a new source image or "original image".
 
-5.) We calculate the cosine distance from the embeddings of the images in our dataframe to our original image embedding and then output a list of most similar images in descending order (with the lowest cosine distance first).
+5.) We calculate the cosine distance from each of the embeddings in our dataframe as a distance from our original image embedding and then output a list of most similar images in asccending order (lowest cosine distance first).
 
-6.) We run multiple linear regression on the corresponding dataframe data and run a gridsearch to optimize the model to accurately predict the price of our item.
+6.) We run the model as a batch and output embeddings to a 2D space to visualize groupings and model performance.
+
+7.) We then implement Triplet loss function to attempt to group similar classes closer together with our model providing higher accuracy and analyse results. Also tried to implement ViT with lesser results without training model.
+
+8.) Conclusion: see below for outcomes and next steps with recomendations
