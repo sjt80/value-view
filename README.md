@@ -9,7 +9,8 @@ standard libraries are used with the exception of PIL, Tensorflow and Tensorflow
 The model is trained on data scraped from ebay for 5 different albums and the jupyter notebooks are split into 2 main sections:
 
 ## Step 1: EDA & Image Download:
-[Notebook Link](https://github.com/sjt80/value-view/edit/main/step1-EDA+download.ipynb) 
+[Notebook Link](https://github.com/sjt80/value-view/blob/main/step1-EDA%2Bdownload.ipynb)
+
 [Google Colab Link](https://drive.google.com/file/d/10DJIZaO_zgaHYTefsnERMRjqnUUUN4-z/view?usp=sharing) 
 
 This notebook receives a json file from our scraping; currently scraping ebay data with bright data IDE for SOLD items via a search, then we extract the product detail pages from this and rerun each pdp page to get item details. 
@@ -21,8 +22,9 @@ connections so we have some images not downloaded (I need to update script to re
 The current notebook can be run to get your own images from your own scraping json file however for easier demonstration purposes we have supplied some images in the repository in scraping/files/Archive.zip
 
 ## Step 2:  Value-Pred 
-[Notebook Link](https://github.com/sjt80/value-view/edit/main/step2-value-pred_tf2.ipynb) 
-[Google Colab Link]((https://drive.google.com/file/d/10xfO9Rx4IwqJII0-Qi2Q9FdWi3WWk-85/view?usp=sharing)) 
+[Notebook Link](https://github.com/sjt80/value-view/blob/main/step2-value-pred_tf2.ipynb) 
+
+[Google Colab Link](https://drive.google.com/file/d/10xfO9Rx4IwqJII0-Qi2Q9FdWi3WWk-85/view?usp=sharing)
 
 This is where the magic happens! This notebook predicts the price of an item based on input image with the following steps:
 
